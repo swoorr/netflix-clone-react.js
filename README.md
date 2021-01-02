@@ -9,5 +9,5 @@ I am thinking of adding a few features again later.
 
 ## Published on Netlify
 
-(https://netflix-clone-swr.netlify.app/)[https://netflix-clone-swr.netlify.app/]
+[https://netflix-clone-swr.netlify.app/](https://netflix-clone-swr.netlify.app/)
 
