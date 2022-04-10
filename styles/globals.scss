@@ -1,0 +1,179 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+.slick-list,
+.slick-track {
+    touch-action: pan-y;
+}
+body {
+    background: #141414;
+    padding-bottom: 20vh;
+}
+
+div#header {
+    position: fixed;
+    top: 0;
+    background:linear-gradient(black,transparent);
+    width: 100%;
+    z-index: 1;
+    
+    .logo {
+        float: left;
+        margin-left: 2rem;
+        img {
+            height: 68px;
+        }
+    }
+
+    ul.tabbed-primary-navigation {
+        margin-left: 0rem;
+        float: left;
+        margin-top: 1.5rem;
+        li {
+            display: inline;
+            padding: 2pt 9pt;
+            a {
+                color: white;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 600px) {
+            margin-top: -1vh;
+            margin-bottom: 2vh;
+        }
+    }
+}
+
+.banners {
+    max-height: 80vh;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        margin-top: -7vh;
+    }
+}
+
+.banners + div {
+    margin-top: -10vw;
+}
+
+.seriesList {
+    padding: 0 30px;
+    margin: -90px 0;
+    // > div:nth-child(2) {
+    //     overflow-y: auto;
+    //     overflow-x: visible;
+    //     white-space: nowrap;
+    //     &::-webkit-scrollbar{
+    //         display:none;
+    //     }
+    //     > div {
+    //         display:inline-block;
+    //     }
+    // }
+
+    h2 {
+        color: white;
+        font-weight: bold;
+        margin-bottom: -12.5vh;
+        @media (max-width: 600px) {
+            font-size: 2.5vh;
+        }
+    }
+
+    > .row {
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+        margin-left: 0.71rem;
+        @media (max-width: 600px) {
+            margin-bottom: -3rem;
+        }
+    }
+
+    .__parent_Items {
+        margin: 90px 0;
+    }
+
+    .Items {
+        border-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        position: relative;
+        transition: all 300ms;
+        transition-delay: 300ms;
+        cursor: pointer;
+        margin: 0.3rem;
+
+        &:hover > footer {
+            display: block;
+        }
+
+        img {
+            border-radius: 5px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px black;
+            transform: scale(1.2);
+            margin-top: -5vh;
+            margin-left: 1vh;
+            z-index: 2;
+
+            @media (max-width: 600px) {
+                margin-left: 0;
+                transform: scale(1.01);
+            }
+        }
+
+        footer {
+            background: #181818;
+            font-size: 14px;
+            padding: 0 0.2rem 0.2rem;
+            padding-bottom: 2vh;
+            margin-top: -5px;
+            display: none;
+            position: absolute;
+            width: calc(100%);
+            transition-timing-function: ease-in;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: all 1000ms;
+
+            .avail {
+                padding: 1vh;
+                .age {
+                    border: 1px solid white;
+                    color: white;
+                }
+                .green {
+                    color: #4fd26e;
+                    font-weight: bold;
+                }
+            }
+
+            .ctg {
+                margin-top: 1vh;
+                margin-left: 1vh;
+                div {
+                    color: white;
+                    margin-left: 0.5vh;
+                    font-size: 12px;
+                    &:after {
+                        content: "- ";
+                        margin-left: 0.5vh;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
